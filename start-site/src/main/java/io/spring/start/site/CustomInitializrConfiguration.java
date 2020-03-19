@@ -1,5 +1,6 @@
 package io.spring.start.site;
 
+import io.spring.initializr.generator.spring.build.BuildCustomizer;
 import io.spring.initializr.metadata.InitializrMetadataBuilder;
 import io.spring.initializr.metadata.InitializrProperties;
 import io.spring.initializr.web.support.DefaultInitializrMetadataProvider;
@@ -24,4 +25,13 @@ public class CustomInitializrConfiguration {
 				initializrMetadataUpdateStrategy);
 	}
 
+	@Bean
+	public BuildCustomizer customMavenBuildCustomizer() {
+		return new CustomMavenBuildCustomizer();
+	}
+
+	@Bean
+	public BuildCustomizer customGradleBuildCustomizer() {
+		return new CustomGradleBuildCustomizer();
+	}
 }
