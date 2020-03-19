@@ -1,0 +1,16 @@
+custom:
+  initializr:
+    dependencies:
+      - name: Eventuate Local
+        content:
+          - name: Eventuate Local
+            id: eventuatelocal
+            groupId: io.eventuate.local.java
+            artifactId: eventuate-local-java-spring-jdbc
+            version: 0.32.0.RC5
+            scope: compile
+            description: A framework for developing (microservice-based) applications.
+            starter: false
+            links:
+              - rel: reference
+                href: https://github.com/eventuate-local/eventuate-local
